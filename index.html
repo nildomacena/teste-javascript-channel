@@ -2,9 +2,12 @@
 <div style="margin: 20px;">
     <h2>Teste javascript Channel</h2>
     <div id="teste">Carregando...</div>
+    <div id="cookie"></div>
     <script>
+        document.getElementById('cookie').innerHTML = document.cookie;
         setTimeout(() => {
             document.getElementById('teste').innerHTML = '<h2>Rodou teste</h2>';
+            document.getElementById('cookie').innerHTML = document.cookie;
             Print.postMessage('Hello World being called from Javascript code');
         }, 5000)
     </script>
